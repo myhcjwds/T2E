@@ -1,0 +1,28 @@
+{
+  "model_path": "../LLMs/internlm/internlm2-7b",
+  "physical_witness_days": 7,
+  "ordinary_window_days": 7,
+  "tau": "0.75",
+  "packet_cap": null,
+  "short_history": 100,
+  "long_history": 100,
+  "max_context_tokens": 8192,
+  "fusion_spec": {
+    "second_view": {
+      "history_len": 100,
+      "relation_quota": 100,
+      "weight": 0.5,
+      "gate": "always"
+    },
+    "prior": {
+      "type": "backoff",
+      "half_life": 8760.0,
+      "pseudocount": 0.1
+    },
+    "calibration": "product"
+  },
+  "partner_spec": {
+    "pair7": 1.0
+  },
+  "symbolic_weight": 0.3
+}
